@@ -15,7 +15,7 @@ formAñadir.addEventListener('submit', (event) => {
   let imagen = formAñadir.imagen.value
   console.log(nombre,descripcion,precio,imagen);
 
-  let newDatos = {imagen: imagen, nombre: nombre, descripcion: descripcion, precio: precio }
+  let newDatos = {nombre: nombre, descripcion: descripcion, precio: precio, imagen: imagen }
 
 
   if (!newDatos.nombre || !newDatos.descripcion || !newDatos.precio) {
@@ -150,11 +150,11 @@ const editar = (id) => {
   formEditar.addEventListener('submit', (event) => {
     event.preventDefault ();
     const nuevosDatos = {
-      id: formEditar.id.value,
       nombre: formEditar.nombre.value,
       descripcion: formEditar.descripcion.value,
+      precio: formEditar.precio.value,
       imagen: formEditar.imagen.value,
-      precio: formEditar.precio.value
+      id: formEditar.id.value,
     }
 
     if (!nuevosDatos.id || !nuevosDatos.nombre || !nuevosDatos.descripcion || !nuevosDatos.precio) {
@@ -171,7 +171,7 @@ const editar = (id) => {
     console.log(nuevosDatosJson)
     const enviarNewDatos = async()=>{
       try{
-        const enviarDatos = await fetch(endpoint+'/'+nuevosDatos.id,{
+        const enviarDatos = await fetch(endpoint,{
           method: 'put',
           headers: {
             'content-type': 'application/json'
