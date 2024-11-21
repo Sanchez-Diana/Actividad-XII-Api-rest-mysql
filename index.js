@@ -40,7 +40,7 @@ app.post('/productos', (req, res)=>{
             console.error('error al guardar')
             return;
         }
-        //console.log(result)
+        console.log(result)
         res.json({mensaje: "nuevo prod agregado"})
     })
 })
