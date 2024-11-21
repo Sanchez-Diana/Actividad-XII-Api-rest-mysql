@@ -1,4 +1,4 @@
-const respuesta = fetch('http://localhost:3000/productos')
+const respuesta = fetch('/productos')
 
 .then(respuesta => respuesta.json())
 .then(datos => mostrarProductos(datos));

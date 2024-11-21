@@ -1,5 +1,5 @@
 
- const endpoint = 'http://localhost:3000/productos'
+ const endpoint = '/productos'
 
 const formAñadir = document.forms['formAñadir']
 console.log(formAñadir)
