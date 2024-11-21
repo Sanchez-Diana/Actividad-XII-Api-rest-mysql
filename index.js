@@ -33,7 +33,7 @@ app.post('/productos', (req, res)=>{
 
     const values = Object.values(req.body)
 
-    const sql = "insert into productos (titulo, descripcion, precio, imagen) values (?,?,?,?)"
+    const sql = "insert into productos (nombre, descripcion, precio, imagen) values (?,?,?,?)"
 
     db.query(sql, values, (err, result)=>{
         if(err){
@@ -63,7 +63,7 @@ app.delete('/productos/:id', (req, res)=>{
 app.put('/productos', (req, res)=>{
     const valores = Object.values(req.body)
     //console.log(valores)
-    const sql = "update productos set titulo = ?, descripcion = ?, precio = ?, imagen = ? where id = ?"
+    const sql = "update productos set nombre = ?, descripcion = ?, precio = ?, imagen = ? where id = ?"
 
     db.query(sql, valores, (err, result)=>{
         if(err){
