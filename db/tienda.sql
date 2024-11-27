@@ -40,10 +40,7 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `titulo`, `descripcion`, `precio`, `imagen`) VALUES
-(1, 'MCR', 'Descripcion', 123, 'th.jpg'),
-(2, 'Ash Plushie', 'love her', 10000, 'sash.jpg'),
-(5, 'monopatin', 'aaa', 222, 'th.jpg'),
-(6, 'eeeeeeeeeeee', 'aaaaaaaaaaaa', 1111111111, 'fnaf.jpg');
+
 
 --
 -- Índices para tablas volcadas
