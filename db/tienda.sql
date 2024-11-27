@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `productos` (
   `id` int(11) NOT NULL,
-  `titulo` varchar(50) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
   `descripcion` varchar(50) NOT NULL,
   `precio` double NOT NULL,
   `imagen` varchar(30) NOT NULL
@@ -39,7 +39,7 @@ CREATE TABLE `productos` (
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`id`, `titulo`, `descripcion`, `precio`, `imagen`) VALUES
+INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `imagen`) VALUES
 
 
 --

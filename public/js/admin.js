@@ -42,7 +42,6 @@ formAñadir.addEventListener('submit', (event) => {
       const respuesta = await enviarDatos.json()
       console.log(respuesta.mensaje)
 
-    // document.querySelector('#agregando').style.display = 'none'
     mostrarMensaje(respuesta.mensaje)
     
     setTimeout(()=>{location.reload();},3000)
